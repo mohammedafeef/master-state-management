@@ -1,9 +1,10 @@
-interface TodoProps {
-  todoGetter: () => { id: string; content: string }[];
-}
-
-const Todo = ({ todoGetter }: TodoProps) => {
-  const todos = todoGetter();
+const Todo = () => {
+  const todos = [
+    {
+      id: "1",
+      content: "create something"
+    }
+  ]
   return (
     <>
       {todos.map((todo) => (
