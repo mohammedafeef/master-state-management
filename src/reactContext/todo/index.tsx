@@ -5,6 +5,7 @@ import { useReducer } from "react";
 
 export const todoContext = createContext({} as TodoContext);
 
+// todo context provider
 export const TodoProvider = ({ children }: TodoProviderType) => {
   const [todos, dispatch] = useReducer(todoReducer, []);
   return (

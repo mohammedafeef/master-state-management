@@ -3,12 +3,12 @@ import { useContext } from "react";
 import { Todo } from "./types";
 import ActionTypes from "./actions";
 
-export const useAddTodo = (data: Todo) => {
+export const useAddTodo = () => {
     const { dispatch } = useContext(todoContext);
-    return dispatch({ type: ActionTypes.addTodo, payload: { data } })
+    return (data: Todo) => dispatch({ type: ActionTypes.addTodo, payload: { data } })
 }
 
-export const useDeleteTodo = (id: string) => {
+export const useDeleteTodo = () => {
     const { dispatch } = useContext(todoContext);
-    return dispatch({ type: ActionTypes.deleteTodo, payload: { id } })
+    return (id: string) => dispatch({ type: ActionTypes.deleteTodo, payload: { id } })
 }

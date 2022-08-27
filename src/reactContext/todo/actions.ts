@@ -1,6 +1,7 @@
-enum ActionTypes {
+// reducer actions
+enum Actions {
     addTodo = "addTodo",
     deleteTodo = "deleteTodo",
 }
 
-export default ActionTypes;
+export default Actions;

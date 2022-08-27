@@ -1,5 +1,5 @@
 import { Dispatch, ReactNode } from "react";
-import ActionTypes from "./actions";
+import Actions from "./actions";
 
 export interface Todo {
     id: string;
@@ -16,6 +16,6 @@ export interface TodoProviderType {
 }
 
 export interface TodoAction {
-    type: ActionTypes,
+    type: Actions,
     payload?: { id?: string, data?: Todo }
 }

@@ -6,8 +6,8 @@ const Todo = ({ todoGetter }: TodoProps) => {
   const todos = todoGetter();
   return (
     <>
-      {todos.map((todo) => (
-        <div className="todo">{todo.content}</div>
+      {todos.map((todo, index) => (
+        <div className="todo" key={index}>{todo.content}</div>
       ))}
     </>
   );
